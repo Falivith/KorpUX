@@ -14,11 +14,22 @@
 }
 
 .formContainer{
+    height: 400px;
     width: 30%;
     min-width: 500px;
     margin-top: 25px;
     border-radius: 10px;
     gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .externalContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .visualizationContainer, .formContainer {
+        width: 80%;
+    }
 }
 
 .all-tasks{
@@ -36,6 +47,12 @@ h2{
 .task-title {
     margin: 0;
     font-weight: bold;
+}
+
+.foundtask-title{
+    margin-right: 20px;
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 .task-description {
@@ -98,8 +115,6 @@ label {
 }
   
 .footer {
-    height: 20px;
-    padding-bottom: 20px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -112,10 +127,11 @@ label {
     margin-top: 20px;
 }
 
-.found-tasks h2 {
+.found-tasksh2 {
     font-size: 1.2em;
     margin-bottom: 10px;
     color: #333;
+    margin-right: 20px;
 }
 
 .task-actions {

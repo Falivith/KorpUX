@@ -67,6 +67,7 @@ export class AppComponent implements OnInit{
 
   // Editar Tarefa
   editTask(id: number){
+    console.log(this.title$, this.description$)
     this.http.put<void>(`${this.url}/tasks/${id}`, {title: this.title$, description: this.description$})
     .subscribe(_ => this.getTasks())
   }
